@@ -115,7 +115,7 @@ section.sessao1{
 }
 
 .lista-chamada ul li{
-  padding-top: 5px;
+  padding-top: 8px;
 }
 
 .lista-chamada input[type=button]{
@@ -142,7 +142,13 @@ section.sessao1{
   background-repeat: no-repeat;
 }
 
+/*criar aside pro menu-mobile*/
+
 @media screen and (max-width: 425px){
+  header a{
+    color: #000;
+  }
+
   .bg-inicio .logo{
     float: none;
     display: block;
@@ -151,10 +157,57 @@ section.sessao1{
     transform: translateX(-50%);
   }
 
-  /*retirar quando for colocar o JS do menu mobile*/
-  .bg-inicio nav{
+  /*
+  .bg-inicio header a{
+    color: #ccc !important;
+  }*/
+
+  .bg-inicio nav.desktop-menu{
     display: none;
   }
+
+  .bg-inicio nav.mobile-menu{
+    display: block;
+  }
+
+  .bg-inicio nav.mobile-menu ul{
+    width: 100%;
+    position: absolute;
+    top: 42px;
+    left: 0;
+    /*left: 15px;*/
+    list-style-type: none;
+    background-color: #fff;
+    text-align: center;
+  }
+  .bg-inicio nav.mobile-menu ul:not(:last-child){
+    padding: 5px 0;
+  }
+
+  .bg-inicio nav.mobile-menu ul li{
+    border-bottom: 3px solid #000;
+    cursor: pointer;
+    padding: 5px 0;
+  }
+
+  .bg-inicio nav.mobile-menu ul li:hover{
+    background-color: rgb(230,230,230);
+  }
+
+  .bg-inicio nav.mobile-menu i{
+    color: white;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+
+  /*
+  .bg-inicio .text-bg{
+    margin-top: 50px !important;
+  }
+  */
 }
 
 @media screen and (max-width: 650px){
@@ -179,7 +232,7 @@ section.sessao1{
 
   .lista-chamada input[type=button]{
     display: block;
-    width: 250px;
+    width: 50%;
     height: 50px;
     margin: auto;
   }
@@ -215,6 +268,10 @@ section.sessao1{
     margin-top: 1%;
   }
 
+  .lista-chamada ul li{
+    padding-top: 5px;
+  }
+
   .lista-chamada input[type=button]{
     margin-top: 10px;
   }
@@ -225,3 +282,9 @@ section.sessao1{
     top: -30px;
   }
 }
+
+@media screen and (max-height: 425px){
+  .text-bg h2{
+    font-size: 30px;
+  }
+} 
