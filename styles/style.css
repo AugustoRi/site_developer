@@ -77,7 +77,7 @@ header a{
 
 .text-bg h2{
   font-weight: normal;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .text-bg p{
@@ -96,18 +96,18 @@ section.sessao1{
 .sessao1 .lista-chamada{
   float: left;
   width: 50%;
-  margin-top: 3%;
+  margin-top: 4%;
   position: relative;
   left: 10%;
 }
 
 .lista-chamada h2{
-  font-size: 40px;
+  font-size: 30px;
   font-weight: lighter;
 }
 
 .lista-chamada h3{
-  margin-top: 10px;
+  /*margin-top: 10px;*/
   font-weight: lighter;
 }
 
@@ -141,6 +141,20 @@ section.sessao1{
   background-image: url(../images/device.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+
+section.sessao2 h2{
+  text-align: center;
+  color: #472663;
+  font-weight: normal;
+  font-size: 32px;
+}
+
+section.sessao2 p{
+  text-align: center;
+  padding-top: 25px;
+  max-width: 900px;
+  margin: auto;
 }
 
 /*criar aside pro menu-mobile*/
@@ -284,7 +298,7 @@ section.sessao1{
   }
 }
 
-@media screen and (max-height: 425px){
+@media screen and (max-height: 470px){
   .text-bg h2{
     font-size: 30px;
   }
