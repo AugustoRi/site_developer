@@ -1,3 +1,8 @@
+/*
+- criar aside pro menu-mobile com JS
+- renomear as section quando for upar pro repository
+*/
+
 *{
   margin: 0;
   padding: 0;
@@ -143,21 +148,125 @@ section.sessao1{
   background-repeat: no-repeat;
 }
 
-section.sessao2 h2{
+section.sessao2{
   text-align: center;
+}
+
+section.sessao2 .container{
+  max-width: 980px;
+}
+
+section.sessao2 h2{
   color: #472663;
   font-weight: normal;
   font-size: 32px;
 }
 
 section.sessao2 p{
-  text-align: center;
   padding-top: 25px;
   max-width: 900px;
   margin: auto;
 }
 
-/*criar aside pro menu-mobile*/
+section.sessao2 img{
+  /*margin-top: 40px;*/
+  /*rever margin-top*/
+  width: 100%; /*rever*/
+  margin: auto;
+  display: block;
+  position: relative;
+  top: 50px;
+  -webkit-box-shadow: 1px 1px 8px 2px #000000; 
+  box-shadow: 1px 1px 8px 2px #000000;
+}
+
+section.sessao3{
+  width: 100%;
+}
+
+.sessao3 .container{
+  max-width: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sessao3 .card-equipe,
+.sessao3 .card-criador{
+  width: 50%;
+  padding: 100px 0 50px 0;
+  line-height: 30px;
+}
+
+.sessao3 .card-equipe{
+  background-color: #835FA7;
+}
+
+.sessao3 .wraper-equipe{
+  max-width: 450px;
+  float: right;
+  padding: 10px 2%;
+  /*padding: 100px 2% 0px 2%;*/
+}
+
+.sessao3 .card-equipe h2{
+  color: #fff;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.sessao3 .card-equipe p{
+  color: #fff;
+  font-weight: lighter;
+}
+
+.sessao3 .card-criador{
+  background-color: #fff;
+}
+
+.sessao3 .wraper-criador{
+  max-width: 450px;
+  padding: 0 6%;
+}
+
+.card-criador .text-criador{
+  font-style: italic;
+  display: inline-block;
+  color: #232323;
+}
+
+.card-criador .foto-criador{
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: -4px;
+  width: 60px;
+  height: 60px;
+  background-image: url(../images/perfil-perto.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  border-radius: 50%;
+}
+
+.card-criador .slider-criador{
+  width: 30%;
+  margin-left: 6%;
+  height: 20px;
+}
+
+.slider-criador span{
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.slider-criador span:not(:first-of-type){
+  margin-left: 10px;
+}
 
 @media screen and (max-width: 425px){
   header a{
@@ -216,6 +325,14 @@ section.sessao2 p{
     top: 15px;
     cursor: pointer;
     font-size: 25px;
+  }
+
+  section.sessao2 p{
+    margin: 15px auto;
+  }
+
+  section.sessao2 img{
+    display: none;
   }
 
   /*
@@ -296,6 +413,45 @@ section.sessao2 p{
     height: 350px;
     top: -30px;
   }
+
+  section.sessao2{
+    padding-top: 40px;
+  }
+
+  section.sessao2 img{
+    position: static;
+    margin: 5% auto;
+  }
+
+  .sessao3 .container{
+    display: block;
+  }
+
+  .sessao3 .card-equipe,
+  .sessao3 .card-criador{
+    width: 100%;
+    padding: 50px;
+  }
+
+  .sessao3 .wraper-equipe,
+  .sessao3 .wraper-criador{
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+  } 
+
+  .sessao3 .wraper-equipe p,
+  .sessao3 .wraper-criador p{
+    text-align: left;
+    margin-left: 7%;
+  }
+
+  .card-criador .slider-criador {
+    width: 100%;
+    text-align: center;
+    margin: 10px auto;
+    height: 20px;
+}
 }
 
 @media screen and (max-height: 470px){
